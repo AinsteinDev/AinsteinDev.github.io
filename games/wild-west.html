@@ -2,27 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Wild West RPG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wild West RPG | Ainstein</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
       background-color: #121212;
-      color: white;
-      padding: 20px;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+      background: #1e1e1e;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    .section {
+      padding: 60px 20px;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    .feature-list li {
+      margin-bottom: 10px;
+    }
+    .media img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .cta {
+      background-color: #222;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .btn-warning {
+      background-color: #ffc107;
+      border: none;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Wild West RPG</h1>
-    <p>This is a top-down, open-world mobile RPG set in a gritty Wild West universe. Your choices matter, and the world changes with your decisions.</p>
-    <ul>
-      <li>Act-based open world</li>
-      <li>Choice-driven gameplay</li>
-      <li>No voice acting (yet)</li>
-      <li>Mobile first, with plans for Nintendo Switch</li>
-    </ul>
-    <a href="../index.html" class="btn btn-secondary">Back to Home</a>
-  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Wild West RPG</h1>
+      <p>A choice-driven open-world RPG set across multiple acts, each with its own region of the untamed frontier. Shape your story with every decision.</p>
+    </div>
+  </section>
+
+  <!-- About Game -->
+  <section class="section bg-dark">
+    <div class="container">
+      <h2>About the Game</h2>
+      <p>
+        In Wild West RPG, you’ll navigate through dusty towns, lawless deserts, and fractured territories across a world divided by acts. 
+        Each act brings a new region, characters, and consequences. Explore freely, complete quests, and make decisions that affect the future of the frontier.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section bg-black">
+    <div class="container">
+      <h2>Features</h2>
+      <ul class="feature-list">
+        <li>🔥 Open world structure with act-based regions</li>
+        <li>🤠 Choices matter — every action shapes your story</li>
+        <li>🔫 Skill-based combat and RPG progression</li>
+        <li>🏕️ Side quests, secrets, and factions to align with or betray</li>
+        <li>📱 Optimized for mobile, future plans for Switch</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Media / Screenshots -->
+  <section class="section bg-dark media">
+    <div class="container">
+      <h2>Screenshots</h2>
+      <img src="../assets/images/WW_GameSS_1.png" alt="Wild West Screenshot 1" />
+      <img src="../assets/images/WW_GameSS_2.png" alt="Wild West Screenshot 2" />
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <div class="container">
+      <h2>Coming Soon</h2>
+      <p>Follow development and wishlist the game when available.</p>
+      <a href="#" class="btn btn-warning btn-lg">Wishlist Now</a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
