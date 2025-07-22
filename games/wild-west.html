@@ -15,7 +15,23 @@
     .navbar-dark {
       background-color: #1e1e1e;
     }
-    @media (max-width: 768px) {
+  .hero {
+  background-image: url('../assets/images/WW_Test.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-size: cover;
+    background-position: center center;
+    height: 60vh;
+  }
 
   .hero h1 {
     font-size: 2rem;
@@ -25,15 +41,6 @@
     font-size: 1rem;
   }
 }
-    .hero {
-      background-image: url('../assets/images/WW_Test.gif');
-      background-size: cover;
-      background-position: center center;
-      height: 70vh;
-      position: relative;
-      color: white;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-    }
     .hero::before {
       content: "";
       position: absolute;
