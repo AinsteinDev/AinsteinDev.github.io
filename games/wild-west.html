@@ -15,11 +15,21 @@
     .navbar-dark {
       background-color: #1e1e1e;
     }
+    @media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
     .hero {
       background-image: url('../assets/images/WW_Test.gif');
       background-size: cover;
-      background-position: center;
-      height: 100vh;
+      background-position: center center;
+      height: 70vh;
       position: relative;
       color: white;
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
@@ -49,6 +59,7 @@
       transform: scale(1.02);
       transition: 0.3s ease;
     }
+    
   </style>
 </head>
 <body>
@@ -80,7 +91,7 @@
 </nav>
 
 <!-- About Game -->
-<section class="container my-5" id="about">
+<section class="container-fluid px-4 my-5" id="about">
   <div class="row align-items-center">
     <div class="col-md-6" data-aos="fade-right">
       <img src="../assets/images/WW_GameSS.png" alt="About Image" class="img-fluid rounded shadow">
