@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ainstein</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
@@ -12,31 +12,51 @@
       color: white;
       scroll-behavior: smooth;
     }
+    .carousel-item img {
+      height: 100vh;
+      object-fit: cover;
+    }
+    .carousel-caption {
+      bottom: 20%;
+    }
+    .carousel-caption h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px #000;
+    }
+    .carousel-caption p {
+      font-size: 1.25rem;
+      text-shadow: 1px 1px 6px #000;
+    }
     .navbar-dark {
       background-color: #1e1e1e;
     }
-    .carousel-item img {
-      height: 500px;
-      width: 100%;
-      object-fit: cover;
-    }
-    .card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
     .card:hover {
       transform: scale(1.02);
-      box-shadow: 0 4px 20px rgba(255, 193, 7, 0.3);
+      transition: 0.3s ease;
     }
-    section {
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }
-    .btn-warning:hover {
-      box-shadow: 0 0 10px #ffc107;
+    footer a {
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
+
+<!-- Hero Carousel -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/images/WW_GameSS.png" class="d-block w-100" alt="Slide 1">
+      <div class="carousel-caption text-start">
+        <h1>Ainstein</h1>
+        <p>Indie developer crafting story-driven RPG experiences</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/images/WW_GameSS_2.png" class="d-block w-100" alt="Slide 2">
+    </div>
+  </div>
+</div>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -50,68 +70,29 @@
         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#games">Games</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Hero -->
-<section class="bg-dark text-center" data-aos="fade-up">
-  <div class="container">
-    <h1 class="display-4">Welcome to Ainstein</h1>
-    <p class="lead">I’m a solo indie developer building immersive RPGs that blend rich narratives with impactful choices. Explore my work and upcoming projects below.</p>
-    <a href="#games" class="btn btn-warning mt-3">View My Work</a>
-  </div>
-</section>
-
-<!-- Carousel -->
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="zoom-in">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="assets/images/WW_GameSS.png" class="d-block w-100" alt="Wild West Screenshot 1">
-    </div>
-    <div class="carousel-item">
-      <img src="assets/images/WW_GameSS_2.png" class="d-block w-100" alt="Wild West Screenshot 2">
-    </div>
-  </div>
-</div>
-
-<!-- Games -->
-<section class="container" id="games">
-  <h2 class="mb-4" data-aos="fade-right">My Games</h2>
-
-  <div class="card bg-dark text-white mb-4" data-aos="fade-up">
+<!-- Featured Game -->
+<section class="container my-5" id="games">
+  <h2 class="mb-4" data-aos="fade-up">Featured Game: Wild West RPG</h2>
+  <div class="card bg-dark text-white" data-aos="fade-up" data-aos-delay="100">
     <div class="card-body">
       <h5 class="card-title">Wild West RPG</h5>
-      <p class="card-text">A choice-driven open-world RPG set in the untamed West. Shape your story across diverse acts, regions, and consequences that truly matter.</p>
+      <p class="card-text">A choice-driven top-down RPG set in the rugged frontier. Multiple acts, player agency, and moral consequences await.</p>
       <a href="games/wild-west.html" class="btn btn-warning">View Game</a>
     </div>
   </div>
-
-  <div class="card bg-secondary text-white" data-aos="fade-up" data-aos-delay="100">
-    <div class="card-body">
-      <h5 class="card-title">[Future Game]</h5>
-      <p class="card-text">Placeholder for an upcoming title. Stay tuned!</p>
-    </div>
-  </div>
 </section>
 
-<!-- About -->
-<section class="container" id="about">
-  <h2 class="mb-4" data-aos="fade-left">About Me</h2>
-  <p data-aos="fade-up">I'm Ainstein — a passionate solo developer with a focus on RPGs where decisions and storytelling take center stage. I code, write, design, and dream up entire worlds from scratch. My goal is to build games that give players agency, depth, and emotion—just like the ones that inspired me growing up.</p>
-</section>
-
-<!-- Contact -->
-<section class="container" id="contact">
-  <h2 class="mb-4" data-aos="fade-right">Contact</h2>
-  <p data-aos="fade-up">Interested in publishing, collaboration, or chatting about RPG design? Reach out!</p>
-  <ul data-aos="fade-up" data-aos-delay="100">
-    <li>Email: <a href="mailto:ainstein@example.com" class="text-warning">ainstein@example.com</a></li>
-    <li>Twitter: <a href="#" class="text-warning">Follow Me</a></li>
-    <li>Itch.io: <a href="#" class="text-warning">My Itch.io Page</a></li>
-  </ul>
+<!-- About Me -->
+<section class="container my-5" id="about">
+  <h2 class="mb-4" data-aos="fade-up">About Me</h2>
+  <p data-aos="fade-up" data-aos-delay="100">
+    I’m Ainstein, a solo indie developer who builds narrative-rich, system-driven RPGs. I care about immersion, meaningful choices, and handcrafted worlds that respect player agency.
+  </p>
 </section>
 
 <!-- Footer -->
@@ -124,19 +105,17 @@
       </div>
       <div class="col-md-4 mb-3">
         <h5>Links</h5>
-           <div class="col-md-4 mb-
-          <a href="/" class="text-white text-decoration-none">Home | </a>
-          <a href="/#games" class="text-white text-decoration-none">Games | </a>
-          <a href="/#contact" class="text-white text-decoration-none">Contact</a>
-        </div>
+        <a href="#" class="text-white">Home</a> |
+        <a href="#games" class="text-white">Games</a> |
+        <a href="#about" class="text-white">About</a>
       </div>
       <div class="col-md-4 mb-3">
         <h5>Follow Me</h5>
-        <a href="#" class="text-white me-2 text-decoration-none">Twitter</a>
-        <a href="#" class="text-white text-decoration-none">Itch.io</a>
+        <a href="#" class="text-white me-2">Twitter</a>
+        <a href="#" class="text-white">Itch.io</a>
       </div>
     </div>
-    <hr class="bg-secondary">
+    <hr class="bg-secondary" />
     <p class="mb-0 small">&copy; 2025 Ainstein. All rights reserved.</p>
   </div>
 </footer>
