@@ -42,22 +42,27 @@
 </head>
 <body>
 
-<!-- Hero Carousel -->
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-       <h1>Ainstein</h1>
-        <p>Indie developer crafting story-driven RPG experiences</p>
+<!-- Hero Carousel with Overlay -->
+<div class="position-relative">
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/images/WW_GameSS.png" class="d-block w-100" alt="Slide 1">
       </div>
-      <img src="assets/images/WW_GameSS.png" class="d-block w-100" alt="Slide 1">
-      <div class="carousel-caption text-start">
-       </div>
-    <div class="carousel-item">
-      <img src="assets/images/WW_GameSS_2.png" class="d-block w-100" alt="Slide 2">
+      <div class="carousel-item">
+        <img src="assets/images/WW_GameSS_2.png" class="d-block w-100" alt="Slide 2">
+      </div>
     </div>
+  </div>
+
+  <!-- Fixed Overlay Text -->
+  <div class="position-absolute top-50 start-50 translate-middle text-center text-white" style="z-index: 10;">
+    <h1 class="display-3 fw-bold">Ainstein</h1>
+    <p class="lead">Indie developer crafting story-driven RPG experiences</p>
   </div>
 </div>
 
+  
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <div class="container-fluid">
