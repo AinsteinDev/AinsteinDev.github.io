@@ -9,14 +9,21 @@
   <style>
     body {
       background-color: #121212;
-      color: white;
+      color: #f1f1f1;
+      font-family: 'Segoe UI', sans-serif;
       scroll-behavior: smooth;
     }
     .navbar-dark {
       background-color: #1e1e1e;
     }
+    h1, h2, h4 {
+      color: #ffc107;
+    }
+    .lead {
+      color: #ccc;
+    }
     .section-title {
-      border-bottom: 1px solid #444;
+      border-bottom: 2px solid #ffc107;
       padding-bottom: 0.5rem;
       margin-bottom: 2rem;
     }
@@ -24,15 +31,35 @@
       background-color: #1e1e1e;
       border: none;
       padding: 1.5rem;
-      border-radius: 0.5rem;
-      transition: transform 0.3s ease;
+      border-radius: 0.75rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .project-card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 10px rgba(255, 193, 7, 0.2);
+      transform: translateY(-5px);
+      box-shadow: 0 0 12px rgba(255, 193, 7, 0.3);
+    }
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    ul li::before {
+      content: "🔸";
+      color: #ffc107;
+      margin-right: 0.5rem;
+    }
+    a.text-warning {
+      text-decoration: none;
+    }
+    a.text-warning:hover {
+      text-decoration: underline;
     }
     footer a {
       text-decoration: none;
+    }
+    .divider {
+      height: 2px;
+      background: linear-gradient(to right, #ffc107, transparent);
+      margin: 2rem 0;
     }
   </style>
 </head>
@@ -48,102 +75,80 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/portfolio.html">Portfolio</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section class="text-center py-5" data-aos="fade-up">
   <div class="container">
-    <h1 class="display-4">🎮 Ainstein – (Wajahat Shaikh)</h1>
-    <p class="lead">Unity Dev | Narrative-Focused | Indie Projects</p>
+    <h1 class="display-4">🎮 Ainstein – Game Developer Portfolio</h1>
+    <p class="lead">Unity Dev | Story-Driven | Indie-Minded</p>
   </div>
 </section>
 
+<div class="divider"></div>
+
 <!-- About Me -->
-<section class="container py-5" id="about">
-  <h2 class="section-title">About Me</h2>
+<section class="container py-4" id="about">
+  <h2 class="section-title">💼 About Me</h2>
   <p>
-    I'm a self-taught Unity developer focused on building story-driven and performance-optimized games. My work spans mobile, PC, and prototyping for multiplayer systems. I love creating the kinds of games I want to play—ones with player agency, atmosphere, and emotional weight.
+    I'm a self-taught Unity developer passionate about building the kinds of games I love to play—thoughtful, narrative-driven, and mechanically satisfying. I focus on creating immersive experiences for mobile and desktop, often working solo to design, code, and polish every piece.
   </p>
   <ul>
-    <li>C# / Unity</li>
-    <li>Gameplay Systems (Navmesh AI, Inventory System, Save&Load, Comabt, Quest System, etc)</li>
-    <li>Mobile Optimization</li>
-    <li>Multiplayer / Netcode</li>
-    <li>Cutscene Design / Unity Timeline</li>
+    <li>C# / Unity Game Programming</li>
+    <li>Gameplay & Quest Systems</li>
+    <li>Performance for Low-End Devices</li>
+    <li>Netcode & Peer-to-Peer Prototyping</li>
+    <li>Unity Timeline & Cutscene Design</li>
   </ul>
 </section>
 
-<!-- Projects Section -->
-<section class="container py-5" id="projects">
-  <h2 class="section-title">Projects</h2>
+<div class="divider"></div>
+
+<!-- Projects -->
+<section class="container py-4" id="projects">
+  <h2 class="section-title">🎮 Projects</h2>
 
   <!-- Project 1 -->
   <div class="project-card mb-4" data-aos="fade-up">
-    <h4>The Blight and The West (2025)</h4> <p><strong>Unity Engine | Android</strong></p>
-    <p>A top-down RPG where player choices shape the fate of struggling frontier towns during a mysterious blight. Built custom systems: quest tracking, inventory, cutscene tools, and dynamic AI behavior.</p>
+    <h4>The Blight and The West <span class="text-muted">(2025)</span></h4>
+    <p><strong>Tools:</strong> Unity, C#, Android & PC</p>
+    <p>A top-down RPG where you guide or abandon frontier towns during a mysterious blight. Full system design from scratch—quests, cutscenes, combat, VFX, and dynamic AI.</p>
     <ul>
-      <li>Custom tools: digging, graveyards, enemy spawners</li>
-      <li>Optimized for mobile, scalable to desktop</li>
-      <li>Dialogue manager, horse riding, timeline cutscenes</li>
+      <li>Custom Tools: Graveyards, Spawners, Horse Riding</li>
+      <li>Optimized for Mobile, Built for Expansion</li>
+      <li>Dialogue System + Unity Timeline Integration</li>
     </ul>
-    <p><em>Demo & screenshots coming Summer 2025</em></p>
+    <p><em>Demo coming Summer 2025</em></p>
   </div>
 
   <!-- Project 2 -->
   <div class="project-card mb-4" data-aos="fade-up" data-aos-delay="100">
-    <h4>Time Trigger (2023)</h4>  <p><strong>Unity Engine | Android</strong></p>
-   
-    <p>A casual FPS for Android with intuitive touch controls, scoring, and light progression. Built solo, integrated Unity Ads and analytics, and published on Play Store (unlisted).</p>
+    <h4>Bottle Shooter X <span class="text-muted">(2023)</span></h4>
+    <p><strong>Tools:</strong> Unity, Android</p>
+    <p>Casual FPS with touch mechanics, progressive levels, and ad integration. Solo developed from start to finish and published on the Play Store (unlisted).</p>
     <ul>
-      <li>Touch input & projectile system</li>
-      <li>Level design with rising difficulty</li>
-      <li>Unity Ads + analytics</li>
+      <li>Touch Input + Score Tracking</li>
+      <li>Unity Ads + Lightweight Analytics</li>
+      <li>Fast Iteration with Unity Prefabs</li>
     </ul>
-    <p><em>Play Store (unlisted): link coming soon</em></p>
-  </div>
-
-  
-  <!-- Project 3 -->
-  <div class="project-card mb-4" data-aos="fade-up" data-aos-delay="100">
-    <h4>Multiplayer Prototype(2023)</h4>  <p><strong>Unity Engine | Android</strong></p>
-   
-    <p>A casual FPS for Android with intuitive touch controls, scoring, and light progression. Built solo, integrated Unity Ads and analytics, and published on Play Store (unlisted).</p>
-    <ul>
-      <li>Touch input & projectile system</li>
-      <li>Level design with rising difficulty</li>
-      <li>Unity Ads + analytics</li>
-    </ul>
-    <p><em>Play Store (unlisted): link coming soon</em></p>
-  </div>
-
-
-  <!-- Project 4 -->
-  <div class="project-card mb-4" data-aos="fade-up" data-aos-delay="100">
-    <h4>Escape(2023)</h4>  <p><strong>Unreal Engine | Android</strong></p>
-  
-    <p>A casual FPS for Android with intuitive touch controls, scoring, and light progression. Built solo, integrated Unity Ads and analytics, and published on Play Store (unlisted).</p>
-    <ul>
-      <li>Touch input & projectile system</li>
-      <li>Level design with rising difficulty</li>
-      <li>Unity Ads + analytics</li>
-    </ul>
-    <p><em>Play Store (unlisted): link coming soon</em></p>
+    <p><em>Download link available on request</em></p>
   </div>
 </section>
 
+<div class="divider"></div>
+
 <!-- Additional Links -->
-<section class="container py-5" id="links">
-  <h2 class="section-title">More</h2>
+<section class="container py-4" id="links">
+  <h2 class="section-title">📎 Additional Links</h2>
   <ul>
-    <li><a href="#" class="text-warning">Resume (PDF)</a></li>
-    <li><a href="/"  class="text-warning">Website</a></li>
-<!--     <li><a href="https://linkedin.com/in/yourname" class="text-warning">LinkedIn</a></li>
-    <li><a href="https://github.com/yourusername" class="text-warning">GitHub</a></li>
-    <li><a href="#" class="text-warning">Devlog / YouTube</a></li> -->
+    <li><a href="#" class="text-warning">📄 Resume (PDF)</a></li>
+    <li><a href="https://linkedin.com/in/yourname" class="text-warning">💼 LinkedIn</a></li>
+    <li><a href="https://github.com/yourusername" class="text-warning">📁 GitHub</a></li>
+    <li><a href="#" class="text-warning">📹 Devlog / YouTube</a></li>
   </ul>
 </section>
 
@@ -153,11 +158,12 @@
     <div class="row">
       <div class="col-md-4 mb-3">
         <h5>Ainstein</h5>
-        <p class="small">Indie games crafted with love & coffee.</p>
+        <p class="small">Built with curiosity, grit, and coffee.</p>
       </div>
       <div class="col-md-4 mb-3">
         <h5>Links</h5>
         <a href="/" class="text-white">Home</a> |
+        <a href="/#games" class="text-white">Games</a> |
         <a href="/portfolio.html" class="text-white">Portfolio</a>
       </div>
       <div class="col-md-4 mb-3">
