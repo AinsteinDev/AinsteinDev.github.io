@@ -38,6 +38,21 @@
       transform: translateY(-5px);
       box-shadow: 0 0 12px rgba(255, 193, 7, 0.3);
     }
+    .portfolio-nav {
+   background-color: #1e1e1e;  /*  dark background to match theme */
+   box-shadow: 0 2px 5px rgba(0,0,0,0.4); */
+  z-index: 1000;
+}  
+
+.portfolio-nav a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.portfolio-nav a:hover {
+  color: #ffc107; /* accent highlight */
+}
     ul {
       list-style: none;
       padding-left: 1rem;
@@ -45,7 +60,7 @@
     ul li::before {
       content: "🔸";
       color: #ffc107;
-      margin-right: 0.5rem;
+      margin-right: .5rem;
     }
     a.text-warning {
       text-decoration: none;
@@ -68,7 +83,7 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<!-- <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Ainstein</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -81,7 +96,7 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
 
 <!-- Hero -->
 <section class="text-center py-5" data-aos="fade-up">
@@ -89,10 +104,19 @@
     <h1 class="display-4">🎮 Ainstein – (Wajahat Shaikh)</h1>
      <p class="lead">Unity Developer exploring story-driven design through solo projects</p>
   </div>
+  
+<div class="divider"></div>
 </section>
 
-<div class="divider"></div>
-
+     <!-- Sticky Secondary Nav -->
+<nav class="portfolio-nav sticky-top py-2">
+  <div class="container text-center" st>
+    <a href="#about" class="mx-2 text-decoration-none">About Me</a>
+    <a href="#projects" class="mx-2 text-decoration-none">Projects</a>
+    <a href="#links" class="mx-2 text-decoration-none">Contact</a>
+  </div>
+</nav>
+  <div class="divider"></div>
 <!-- About Me -->
 <section class="container py-4" id="about">
   <h2 class="section-title">💼 About Me</h2>
@@ -278,13 +302,15 @@
 
 <div class="divider"></div>
 
-<!-- Additional Links -->
+<!-- Additional Links and Contacs -->
 <section class="container py-4" id="links">
-  <h2 class="section-title">📎 Additional Links</h2>
+  <h2 class="section-title">📎 Additional Links And Contact</h2>
   <ul>
-    <li><a href="../assets/Resume Game Dev.pdf" class="text-warning">📄 Resume (PDF)</a></li>
-    <li><a href="https://docs.google.com/document/d/1BUMcv5XhThEtDKLnfhTC_B9QjmBDINwyxr2MatCHSBg/edit?usp=sharing" class="text-warning">📄 Resume (Google Docs Link)</a></li>
-     <li><a href="/" class="text-warning">🌐 Website </a></li>
+    <li><a href="../assets/ResumeGameDev.pdf" class="text-warning">📄 Resume (PDF)</a></li>
+<!--     <li><a href="https://docs.google.com/document/d/1BUMcv5XhThEtDKLnfhTC_B9QjmBDINwyxr2MatCHSBg/edit?usp=sharing" class="text-warning">📄 Resume (Google Docs Link)</a></li> -->
+    <li> <a href="mailto:bobbyshaikh7886@gmail.com" class="text-warning">Email: Bobbyshaikh7886@gmail.com </a></li>
+    <li><a href="/" class="text-warning">🌐 Website </a></li>
+     
 <!--     <li><a href="https://linkedin.com/in/yourname" class="text-warning">💼 LinkedIn</a></li>
     <li><a href="https://github.com/yourusername" class="text-warning">📁 GitHub</a></li>
     <li><a href="#" class="text-warning">📹 Devlog / YouTube</a></li> -->
