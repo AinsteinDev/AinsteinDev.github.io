@@ -38,6 +38,21 @@
       transform: translateY(-5px);
       box-shadow: 0 0 12px rgba(255, 193, 7, 0.3);
     }
+    .portfolio-nav {
+  background-color: #1e1e1e; /* dark background to match theme */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  z-index: 1000;
+}  
+
+.portfolio-nav a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.portfolio-nav a:hover {
+  color: #00bcd4; /* accent highlight */
+}
     ul {
       list-style: none;
       padding-left: 1rem;
@@ -89,12 +104,17 @@
     <h1 class="display-4">🎮 Ainstein – (Wajahat Shaikh)</h1>
      <p class="lead">Unity Developer exploring story-driven design through solo projects</p>
   </div>
-   <!-- Secondary Nav -->
-    <div class="portfolio-nav mt-4">
-      <a href="#about" class="mx-3 text-decoration-none text-light">About Me</a>
-      <a href="#projects" class="mx-3 text-decoration-none text-light">Projects</a>
-      <a href="#contact" class="mx-3 text-decoration-none text-light">Contact</a>
-    </div>
+  
+   <!-- Sticky Secondary Nav -->
+<nav class="portfolio-nav sticky-top py-2">
+  <div class="container text-center">
+    <a href="#about" class="mx-3 text-decoration-none">About Me</a>
+    <a href="#projects" class="mx-3 text-decoration-none">Projects</a>
+    <a href="#contact" class="mx-3 text-decoration-none">Contact</a>
+  </div>
+</nav>
+
+<div class="divider"></div>
 </section>
 
 <div class="divider"></div>
