@@ -1,0 +1,237 @@
+<title>Quran App Privacy</title>
+<style>
+  :root {
+    --ink: #16241c;
+    --muted: #55625a;
+    --paper: #faf9f4;
+    --paper-alt: #f0ede3;
+    --line: #dcd7c8;
+    --accent: #1f6b45;
+    --accent-gold: #a97f27;
+    --accent-soft: #e7efe7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ecefe8;
+      --muted: #9aa69d;
+      --paper: #10150f;
+      --paper-alt: #171e17;
+      --line: #283428;
+      --accent: #6fcb9a;
+      --accent-gold: #d9ae5c;
+      --accent-soft: #16241a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ecefe8;
+    --muted: #9aa69d;
+    --paper: #10150f;
+    --paper-alt: #171e17;
+    --line: #283428;
+    --accent: #6fcb9a;
+    --accent-gold: #d9ae5c;
+    --accent-soft: #16241a;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Public Sans", "Segoe UI", system-ui, sans-serif;
+    line-height: 1.65;
+    padding-inline: 20px;
+    padding-block: 48px 80px;
+  }
+  h1, h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+
+  header { margin-bottom: 36px; }
+  .mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .mark svg { width: 34px; height: 34px; flex: none; }
+  .mark span {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.01em;
+  }
+  h1 { font-size: clamp(1.7rem, 5vw, 2.2rem); margin: 0 0 10px; line-height: 1.15; }
+  .meta {
+    color: var(--muted);
+    font-size: 0.88rem;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .meta strong { color: var(--ink); font-weight: 600; }
+
+  .tldr {
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 30px 0 40px;
+  }
+  .tldr p { margin: 0 0 8px; font-size: 0.96rem; }
+  .tldr p:last-child { margin-bottom: 0; }
+  .tldr strong { color: var(--accent); font-family: "Fraunces", Georgia, serif; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 10px; }
+  .tldr ul { margin: 6px 0 0; padding-left: 1.15em; }
+  .tldr li { margin-bottom: 4px; }
+
+  section { margin-block: 34px; }
+  section:first-of-type { margin-top: 0; }
+  h2 {
+    font-size: 1.25rem;
+    margin: 0 0 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+  }
+  section:first-of-type h2 { border-top: none; padding-top: 0; }
+
+  p { margin: 0 0 14px; max-width: 62ch; color: var(--ink); }
+  p.small, li.small { color: var(--muted); font-size: 0.9rem; }
+  ul { margin: 0 0 14px; padding-left: 1.2em; max-width: 62ch; }
+  li { margin-bottom: 8px; }
+  strong { font-weight: 650; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { color: var(--accent-gold); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 14px;
+    font-size: 0.92rem;
+  }
+  table caption { text-align: left; caption-side: top; }
+  th, td {
+    text-align: left;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th { color: var(--muted); font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .tablewrap { overflow-x: auto; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  footer a { color: var(--accent); }
+
+  @media (max-width: 480px) {
+    .meta { flex-direction: column; gap: 4px; }
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="mark">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M24 5c3 5 3 8 0 12-3-4-3-7 0-12Z" fill="var(--accent-gold)"/>
+        <path d="M11 40V22c0-5 5-8 13-13 8 5 13 8 13 13v18" stroke="var(--accent)" stroke-width="2.3" fill="none" stroke-linejoin="round"/>
+        <path d="M17 24v14M31 24v14" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+        <path d="M24 24c-2.6-1.6-4.8-2-7-2v13c2.2 0 4.4.4 7 2 2.6-1.6 4.8-2 7-2V22c-2.2 0-4.4.4-7 2Z" fill="var(--paper)" stroke="var(--accent)" stroke-width="1.6"/>
+      </svg>
+      <span>Quran: Read, Recite &amp; Listen</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <span><strong>Effective:</strong> September 17, 2026</span>
+      <span><strong>Applies to:</strong> the Android app only</span>
+    </div>
+  </header>
+
+  <div class="tldr">
+    <strong>In short</strong>
+    <ul>
+      <li>No account, no sign-in, nothing personally identifiable is collected.</li>
+      <li>No ads, no analytics, no trackers of any kind.</li>
+      <li>Your bookmarks, reading progress, and settings stay on your device.</li>
+      <li>The app talks to one content provider to fetch Quran text, translations, tafsir, and recitations.</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2>Overview</h2>
+    <p>This app exists to make reading, listening to, and reflecting on the Quran simple and free of distraction. It was built without ads, subscriptions, or paid features, and that same philosophy extends to your data: the app is designed to collect as little as possible, and to keep what it does need on your own device wherever it can.</p>
+    <p>This policy explains what happens, in plain terms, when you use the app.</p>
+  </section>
+
+  <section>
+    <h2>Information we don't collect</h2>
+    <p>The app has no account system, no login, and no user profile. It does not ask for your name, email, phone number, location, contacts, photos, or any other personal information. There is no advertising SDK and no analytics or crash-reporting SDK built into the app, so nothing about how you use it is collected or sent anywhere for tracking or advertising purposes.</p>
+  </section>
+
+  <section>
+    <h2>What stays on your device</h2>
+    <p>Everything the app remembers about how you use it is stored locally on your phone, not on a server, and is never transmitted anywhere:</p>
+    <ul>
+      <li><strong>Bookmarks and reading progress</strong> — which surah and ayah you last read or bookmarked.</li>
+      <li><strong>Preferences</strong> — your chosen reciter, translation, text size, and other display settings.</li>
+      <li><strong>Downloaded audio</strong> — recitations you choose to save for offline listening are written to the app's own storage on your device.</li>
+      <li><strong>A local content cache</strong> — translations, tafsir, and similar content are cached on-device after first download, purely so the app loads faster and works better offline. Uninstalling the app or clearing its data removes all of this.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The one thing the app talks to</h2>
+    <p>To show Quran translations, tafsir (commentary), reciter audio, and search results, the app makes network requests to the <strong>Quran Foundation Content API</strong> (<a href="https://quran.foundation" target="_blank" rel="noopener">quran.foundation</a>). The Arabic text itself is bundled with the app and works fully offline.</p>
+    <p class="small">Like any request made over the internet, these connections inherently carry standard technical information (such as your device's IP address and basic request metadata) to the server that responds — this is how the internet works, not something the app collects or stores. The app itself does not attach any identifying information to these requests, and audio for the optional combined-reciter option is streamed directly from a public CDN (quranicaudio.com) the same way.</p>
+  </section>
+
+  <section>
+    <h2>App permissions, and why</h2>
+    <div class="tablewrap">
+      <table>
+        <caption class="small">Every permission the Android app requests</caption>
+        <thead>
+          <tr><th>Permission</th><th>What it's for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Internet</td><td>Fetching translations, tafsir, and audio from the content provider.</td></tr>
+          <tr><td>Foreground service / media playback</td><td>Keeping recitation audio playing reliably while your screen is off or you're in another app.</td></tr>
+          <tr><td>Wake lock</td><td>Preventing playback from being interrupted mid-recitation.</td></tr>
+          <tr><td>Post notifications</td><td>Showing the playback controls in your notification shade and lock screen.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">The app does not request access to your camera, microphone, contacts, location, files outside its own storage, or anything else beyond what's listed above.</p>
+  </section>
+
+  <section>
+    <h2>Children's privacy</h2>
+    <p>The app is suitable for users of any age and does not knowingly collect personal information from anyone, including children, because it does not collect personal information at all.</p>
+  </section>
+
+  <section>
+    <h2>Accuracy of content</h2>
+    <p>Care has been taken in preparing the Quranic text, translations, and audio in this app, but errors are possible. This app is not intended to misrepresent, alter, or spread incorrect information about the Quran — if you notice anything that should be corrected, please get in touch using the contact below.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the update will be reflected here with a new effective date. Continued use of the app after a change means you accept the revised policy.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions, feedback, or corrections are welcome at <a href="mailto:bobhai23.bb@gmail.com">bobhai23.bb@gmail.com</a>.</p>
+  </section>
+
+  <footer>
+    Quran: Read, Recite &amp; Listen — a free, ad-free app for reading, listening to, and reflecting on the Quran.
+  </footer>
+</div>
